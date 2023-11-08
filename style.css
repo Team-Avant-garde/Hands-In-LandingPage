@@ -1,0 +1,116 @@
+html {
+    scroll-behavior: smooth;
+    background-color: #373737;
+    max-width: 100%;
+    /* overflow-x: hidden; */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 20px;
+    color: white;
+    width: calc(100% - 40px); /* Adjusted width to include left and right margin */
+    margin: 30px 20px 0; /* Added top margin and adjusted left and right margin */
+    box-sizing: border-box; /* Ensures padding and border don't increase the element's width */
+}
+
+.brand {
+    font-size: 24px;
+}
+
+.brand a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.tabs {
+    display: flex;
+}
+
+.tab {
+    margin: 0 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.tab:hover {
+    text-decoration: underline;
+}
+
+
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    height: 500%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.section {
+    /* width: 100vw; */
+    height: 100vh;
+    color: white;
+}
+
+.section.home {
+    background-color: #373737;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 5%;
+    margin-left: 30px;
+    /* gap: 80px; */
+}
+
+.section.about {
+    background-color: #242424;
+}
+
+.section.contacts {
+    background-color: #121212;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .menu-icon {
+        display: flex;
+    }
+
+    .tabs {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+    }
+
+    .tabs.active {
+        display: flex;
+    }
+
+    .tabs a {
+        margin: 10px;
+    }
+}

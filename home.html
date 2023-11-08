@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Dynamic Concept</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="brand">HANDSIN</div>
+        <div class="tabs">
+            <a href="#home" class="tab">Home</a>
+            <a href="#about" class="tab">About</a>
+            <a href="#contacts" class="tab">Contacts</a>
+        </div>
+    </div>
+    <div class="sections">
+        <section class="section home" id="home">
+            <div style="display: flex; flex-direction: column;">
+                <div>Hands In, <p> The Mobile App to connect you with you helper </p></div>
+                <div style="display: flex; flex-direction: row;">
+                    <img src="play.png" alt="playstore" style="height: 30%; width: 30%;">
+                    <img src="ios.png" alt="playstore" style="height: 30%; width: 30%;">
+                </div>
+            </div>
+            <div>
+                <img src="mobile.png" alt="mobile" style="height: 80%;">
+            </div>
+        </section>
+        <section class="section about" id="about">About</section>
+        <section class="section contacts" id="contacts">Contacts</section>
+    </div>
+</body>
+</html> 
