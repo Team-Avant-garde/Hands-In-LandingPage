@@ -58,3 +58,16 @@ mobile.addEventListener('mousemove', (e) => {
 mobile.addEventListener('mouseleave', () => {
     mobile.style.transform = 'rotateY(0deg) rotateX(0deg)';
 });
+
+const mobile2 = document.getElementById('tilting-mobile2');
+
+mobile2.addEventListener('mousemove', (e) => {
+    const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+    const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+
+    mobile2.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+});
+
+mobile2.addEventListener('mouseleave', () => {
+    mobile2.style.transform = 'rotateY(0deg) rotateX(0deg)';
+});
