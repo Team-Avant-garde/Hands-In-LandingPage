@@ -71,3 +71,5 @@ mobile2.addEventListener('mousemove', (e) => {
 mobile2.addEventListener('mouseleave', () => {
     mobile2.style.transform = 'rotateY(0deg) rotateX(0deg)';
 });
+
+console.log(window.screen.width)
