@@ -25,9 +25,10 @@ body {
     background-color: transparent;
     padding: 20px;
     color: white;
-    width: calc(100% - 40px); /* Adjusted width to include left and right margin */
-    margin: 30px 20px 0; /* Added top margin and adjusted left and right margin */
-    box-sizing: border-box; /* Ensures padding and border don't increase the element's width */
+    width: calc(100% - 40px);
+    margin: 30px 20px 0;
+    box-sizing: border-box;
+    z-index: 1000;
 }
 
 .brand {
@@ -37,6 +38,7 @@ body {
 .brand a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 
 .tabs {
@@ -47,6 +49,7 @@ body {
     margin: 0 20px;
     text-decoration: none;
     color: white;
+    font-size: 20px;
 }
 
 .tab:hover {
@@ -70,25 +73,85 @@ body {
 
 .section.home {
     background-color: #373737;
-    font-size: 2em;
+    font-size: 3em;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
     margin-right: 5%;
-    margin-left: 30px;
+    margin-left: 5%;
+    white-space: wrap;
     /* gap: 80px; */
+    padding-bottom: 30px;
+    position: relative;
 }
 
+.mobile {
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.mobile img {
+    width: 300px;
+    height: auto;
+    object-fit: fill;
+    animation: tiltAnimation 10s infinite alternate linear;
+    transform-origin: center;
+    transform: rotate(-5deg);
+}
+
+@keyframes tiltAnimation {
+    from {
+        transform: rotateY(-5deg);
+    }
+
+    to {
+        transform: rotateY(5deg);
+    }
+}
+
+.download a {
+    width: 30%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.8);
+}
+
+
 .section.about {
-    background-color: #242424;
+    background-color: #373737;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 5%;
+    margin-left: 5%;
+    white-space: wrap;
+    gap: 100px;
+}
+
+.wavy {
+    position: absolute;
+    bottom: -40%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    /* z-index: -1; */
+}
+
+.text {
+    font-size: 70%;
 }
 
 .section.contacts {
     background-color: #121212;
 }
-
 
 
 @media only screen and (max-width: 600px) {
@@ -100,7 +163,7 @@ body {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 70px;
+        top: 50px;
         left: 0;
         background-color: #333;
         width: 100%;
@@ -111,6 +174,6 @@ body {
     }
 
     .tabs a {
-        margin: 10px;
+        margin: 20px;
     }
 }

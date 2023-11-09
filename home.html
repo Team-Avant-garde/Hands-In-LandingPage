@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <title>Dynamic Concept</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Handsin | Landing Page</title>
 </head>
+
 <body>
     <div class="navbar">
         <div class="menu-icon" onclick="toggleMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+            <div class="bar"><i class="fa fa-bars"></i></div>
         </div>
-        <div class="brand">HANDSIN</div>
+        <div class="brand"><a href="#home">HANDSIN</a></div>
         <div class="tabs">
             <a href="#home" class="tab">Home</a>
             <a href="#about" class="tab">About</a>
@@ -23,19 +25,43 @@
     </div>
     <div class="sections">
         <section class="section home" id="home">
-            <div style="display: flex; flex-direction: column;">
-                <div>Hands In, <p> The Mobile App to connect you with you helper </p></div>
-                <div style="display: flex; flex-direction: row;">
-                    <img src="play.png" alt="playstore" style="height: 30%; width: 30%;">
-                    <img src="ios.png" alt="playstore" style="height: 30%; width: 30%;">
+            <div style="display: flex; flex-direction: column; gap: 70px;">
+                <div class="typing-text" style="font-size: 100%;">Hands In
+                    <p id="typing-text" style="font-size: 60%;"> </p>
+                </div>
+                <div class="download"
+                    style="display: flex;flex-direction: row;justify-content: flex-start;align-content: center;align-items: stretch;flex-wrap: unset;gap: 20px;">
+                    <a href="#android"><img src="play.png" alt="playstore" style="height: 100%; width: 100%;"></a>
+                    <a href="#ios"><img src="ios.png" alt="playstore" style="height: 100%; width: 100%;"></a>
                 </div>
             </div>
-            <div>
-                <img src="mobile.png" alt="mobile" style="height: 80%;">
+            <div class="mobile" id="tilting-mobile">
+                <img src="mobile.png" alt="mobile">
+            </div>
+
+        </section>
+        <section class="section about" id="about">
+            <svg class="wavy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="gray" fill-opacity="1"
+                    d="M0,224L48,197.3C96,171,192,117,288,101.3C384,85,480,107,576,128C672,149,768,171,864,176C960,181,1056,171,1152,170.7C1248,171,1344,181,1392,186.7L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+                </path>
+            </svg>
+            <div class="mobile" id="tilting-mobile">
+                <img src="mobile.png" alt="mobile" style="transform: rotate(-5deg);">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 70px;">
+                <div class="text">
+                    Handsin is a mobile application designed to streamline problem-solving.
+                    Simply post your query and let others lend you a helping hand in finding a solution.
+                </div>
+                <div class="text">
+                    Curious to learn more? Log in, spot problems, and offer your expertise
+                    Be the solution-seeker and the problem-solver, all in one!
+                </div>
             </div>
         </section>
-        <section class="section about" id="about">About</section>
         <section class="section contacts" id="contacts">Contacts</section>
     </div>
 </body>
-</html> 
+
+</html>
