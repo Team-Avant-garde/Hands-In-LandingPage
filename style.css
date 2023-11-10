@@ -71,6 +71,8 @@ body {
     height: 100vh;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-bottom: black;
+    border-bottom-width: 2px;
 }
 
 .section.home {
@@ -141,15 +143,16 @@ body {
 
 .wavy {
     position: absolute;
-    bottom: -37%;
+    bottom: -37.5%;
     left: 0;
     width: 100%;
     height: auto;
     z-index: 1;
 }
+
 .wavy2 {
     position: absolute;
-    bottom: -100%;
+    bottom: -104.5%;
     left: 0;
     width: 100%;
     height: auto;
@@ -159,7 +162,7 @@ body {
 .text {
     font-size: 60%;
     font-family: 'Times New Roman', Times, serif;
-z-index: 1000;
+    z-index: 1000;
 }
 
 .section.contacts {
@@ -169,33 +172,63 @@ z-index: 1000;
     gap: 20px;
 }
 
-  .element {
+/* .profile {
+    display: flex;
+    flex-direction: row;
+}
+
+.element {
     margin: 10px;
     text-align: center;
     flex: 1;
-  }
+}
 
-  .img-container {
+.img-container {
     border-radius: 50%;
     overflow: hidden;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     margin: 0 auto 10px;
-  }
+    transition: transform 0.3s, box-shadow 0.3s;
+} */
 
-  .img-container img {
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow flex items to wrap to a new row */
+}
+
+.element {
+    margin: 10px;
+    text-align: center;
+    flex: 1;
+    max-width: calc(50% - 20px);
+    /* Set max width to 50% of container minus margins */
+}
+
+.img-container {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.img-container:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 10px rgba(201, 195, 195, 0.5);
+}
+
+.img-container img {
     max-width: 100%;
     height: auto;
     display: block;
     object-fit: fill;
-  }
+}
 
-  .profile {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .contact-head {
+.contact-head {
     margin-top: 15px;
     text-align: center;
 }
@@ -208,26 +241,22 @@ z-index: 1000;
 }
 
 .footer {
-    top: 50px;
+    margin-top: 100px;
     right: 0;
     left: 0;
     text-align: center;
     position: relative;
 }
 
-  @media only screen and (max-width: 1536px) {
-    .element {
-      flex-basis: calc(50% - 20px);
-    }
-  }
-
 @media only screen and (max-width: 900px) {
     .text {
         font-size: 50%;
     }
+
     .mobile img {
         width: 250px;
     }
+
     .section.about {
         gap: 20px;
     }
@@ -235,14 +264,29 @@ z-index: 1000;
     .wavy {
         bottom: -22%;
     }
+
     .wavy2 {
         bottom: -102%;
     }
+
+    .element {
+        flex-basis: calc(50% - 20px);
+    }
+
+    .element {
+        max-width: calc(100% - 20px);
+    }
+
+    .img-container {
+        max-width: 200px;
+    }
 }
+
 @media only screen and (max-width: 715px) {
     .text {
         font-size: 40%;
     }
+
     .mobile img {
         width: 220px;
     }
@@ -253,6 +297,7 @@ z-index: 1000;
     .menu-icon {
         display: flex;
     }
+
     .mobile img {
         width: 200px;
     }
