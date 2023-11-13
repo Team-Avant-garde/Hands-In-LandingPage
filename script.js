@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-const text1 = "The Mobile App to connect you with you helper.";
+const text1 = "The Mobile App to connect you with your helper.";
 const text2 = "";
 
 let charIndex1 = 0;
